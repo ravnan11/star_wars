@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:star_wars_project/app/core/models/people.dart';
+import 'package:star_wars_project/app/modules/details/container/detail_container.dart';
 
 class PeopleDetailsWidget extends StatelessWidget {
   const PeopleDetailsWidget(
-      {Key? key, required this.people, required this.index})
+      {Key? key,
+      required this.people,
+      required this.index,
+      required this.onTap})
       : super(key: key);
+  final Function(String, DetailArguments) onTap;
   final People people;
   final int index;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () =>
+          onTap('/details', DetailArguments(people: people, index: index)),
       child: Stack(
         children: [
           Container(
