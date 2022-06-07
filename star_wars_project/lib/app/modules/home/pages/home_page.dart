@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:star_wars_project/app/core/models/people.dart';
+import 'package:star_wars_project/app/modules/details/container/detail_container.dart';
 import 'package:star_wars_project/app/modules/home/pages/widgets/people_details_widget.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key, required this.listPeople, required this.onItemTap})
+      : super(key: key);
   final List<People> listPeople;
-  const HomePage({Key? key, required this.listPeople}) : super(key: key);
+  final Function(String, DetailArguments) onItemTap;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +36,7 @@ class HomePage extends StatelessWidget {
             children: listPeople
                 .map((e) => PeopleDetailsWidget(
                       people: e,
+                      onTap: onItemTap,
                       index: listPeople.indexOf(e),
                     ))
                 .toList()),

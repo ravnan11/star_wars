@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:star_wars_project/app/core/repositories/peoples_repository.dart';
 import 'package:star_wars_project/app/modules/home/container/home_container.dart';
+import 'package:star_wars_project/app/route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Star Wars',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
-      home: HomeContainer(
+      home: StarWarsRoute(
         repository: PeoplesRepositoryImp(
           httpClient: HttpClient(),
         ),
