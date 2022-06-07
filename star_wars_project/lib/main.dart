@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:star_wars_project/my_home_page.dart';
+import 'package:star_wars_project/app/core/repositories/peoples_repository.dart';
+import 'package:star_wars_project/app/modules/home/container/home_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,15 +11,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Star Wars',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Star Wars'),
+      home: HomeContainer(
+        repository: PeoplesRepositoryImp(
+          httpClient: HttpClient(),
+        ),
+      ),
     );
   }
 }
