@@ -1,3 +1,4 @@
 class EndPoints {
-  static const apiPeoples = 'https://swapi.dev/api/people/';
+  static const apiPeoples =
+      'https://akabab.github.io/starwars-api/api/all.json';
 }

@@ -1,47 +1,83 @@
 class People {
+  final int id;
   final String name;
-  final String birthDate;
-  final String mass;
-  final String hairColor;
-  final String skinColor;
-  final String eyeColor;
-  final String gender;
   final String height;
+  final String mass;
+  final String gender;
+  final String homeworld;
+  final String wiki;
+  final String image;
+  final String born;
+  final String bornLocation;
+  final String died;
+  final String diedLocation;
+  final String species;
+  final String hairColor;
+  final String eyeColor;
+  final String skinColor;
+  final String cybernetics;
 
   People({
-    required this.birthDate,
-    required this.mass,
-    required this.hairColor,
-    required this.skinColor,
-    required this.eyeColor,
-    required this.gender,
-    required this.height,
+    required this.id,
     required this.name,
+    required this.height,
+    required this.mass,
+    required this.gender,
+    required this.homeworld,
+    required this.wiki,
+    required this.image,
+    required this.born,
+    required this.bornLocation,
+    required this.died,
+    required this.diedLocation,
+    required this.species,
+    required this.hairColor,
+    required this.eyeColor,
+    required this.skinColor,
+    required this.cybernetics,
   });
 
   factory People.fromJson(Map<String, dynamic> json) {
     return People(
-      name: json['name'] as String,
-      birthDate: json['birth_year'] as String,
-      mass: json['mass'] as String,
-      hairColor: json['hair_color'] as String,
-      skinColor: json['skin_color'] as String,
-      eyeColor: json['eye_color'] as String,
-      gender: json['gender'] as String,
-      height: json['height'] as String,
+      id: json['id'],
+      name: json['name'],
+      height: json['height'].toString(),
+      mass: json['mass'].toString(),
+      gender: json['gender'],
+      homeworld: json['homworld'].toString(),
+      wiki: json['wiki'],
+      image: json['image'],
+      born: json['born'].toString(),
+      bornLocation: json['bornLocation'].toString(),
+      died: json['died'].toString(),
+      diedLocation: json['diedLocation'].toString(),
+      species: json['species'].toString(),
+      hairColor: json['hairColor'].toString(),
+      eyeColor: json['eyeColor'].toString(),
+      skinColor: json['skinColor'].toString(),
+      cybernetics: json['cybernetics'].toString(),
     );
   }
 
   Map<String, dynamic> toMap() {
     return {
+      'id': id,
       'name': name,
-      'mass': mass,
-      'hair_color': hairColor,
-      'skin_color': skinColor,
-      'eye_color': eyeColor,
-      'birth_year': birthDate,
       'height': height,
-      'gender': gender
+      'mass': mass,
+      'gender': gender,
+      'homeworld': homeworld,
+      'wiki': wiki,
+      'image': image,
+      'born': born,
+      'bornLocation': bornLocation,
+      'died': died,
+      'diedLocation': diedLocation,
+      'species': species,
+      'hairColor': hairColor,
+      'eyeColor': eyeColor,
+      'skinColor': skinColor,
+      'cybernetics': cybernetics,
     };
   }
 }

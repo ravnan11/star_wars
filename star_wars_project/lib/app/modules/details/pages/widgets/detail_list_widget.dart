@@ -19,7 +19,7 @@ class DetailListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        color: Colors.white,
+        color: Colors.grey[100],
         child: Column(
           children: [
             Padding(
