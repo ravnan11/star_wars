@@ -21,8 +21,8 @@ class PeoplesRepositoryImp implements IPeoplesRepository {
       final url = Uri.parse(EndPoints.apiPeoples);
       final response = await http.get(url);
       final data = json.decode(response.body);
-      for (var i = 0; i < data['results'].length; i++) {
-        listPeople.add(People.fromJson(data['results'][i]));
+      for (var i = 0; i < data.length; i++) {
+        listPeople.add(People.fromJson(data[i]));
       }
       return listPeople;
     } catch (e) {

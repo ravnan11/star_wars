@@ -16,12 +16,13 @@ class DetailAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: SliverAppBar(
+        backgroundColor: Colors.black,
         pinned: true,
         elevation: 0,
-        // backgroundColor: pokemon.baseColor,
         leading: IconButton(
           onPressed: onBack,
           icon: Icon(Icons.chevron_left),
+          color: Colors.yellow,
         ),
         centerTitle: false,
         title: AnimatedOpacity(
