@@ -36,7 +36,7 @@ class PeopleDetailsWidget extends StatelessWidget {
                 children: [
                   Center(
                     child: CachedNetworkImage(
-                      imageUrl: people.image,
+                      imageUrl: people.image!,
                       width: size.width * .60,
                       height: size.width * .60,
                       placeholder: (context, url) =>

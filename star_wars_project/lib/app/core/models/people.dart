@@ -1,21 +1,21 @@
 class People {
-  final int id;
-  final String name;
-  final String height;
-  final String mass;
-  final String gender;
-  final String homeworld;
-  final String wiki;
-  final String image;
-  final String born;
-  final String bornLocation;
-  final String died;
-  final String diedLocation;
-  final String species;
-  final String hairColor;
-  final String eyeColor;
-  final String skinColor;
-  final String cybernetics;
+  final int? id;
+  final String? name;
+  final String? height;
+  final String? mass;
+  final String? gender;
+  final String? homeworld;
+  final String? wiki;
+  final String? image;
+  final String? born;
+  final String? bornLocation;
+  final String? died;
+  final String? diedLocation;
+  final String? species;
+  final String? hairColor;
+  final String? eyeColor;
+  final String? skinColor;
+  final String? cybernetics;
 
   People({
     required this.id,
@@ -44,7 +44,7 @@ class People {
       height: json['height'].toString(),
       mass: json['mass'].toString(),
       gender: json['gender'],
-      homeworld: json['homworld'].toString(),
+      homeworld: json['homeworld'].toString(),
       wiki: json['wiki'],
       image: json['image'],
       born: json['born'].toString(),

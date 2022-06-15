@@ -29,7 +29,7 @@ class DetailAppBarWidget extends StatelessWidget {
           duration: Duration(milliseconds: 300),
           opacity: isOnTop ? 0 : 1,
           child: Text(
-            people.name,
+            people.name!,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,

@@ -36,6 +36,8 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
+    print('VALOR DO MODEL ATUAL');
+    print(widget.people.hairColor);
     return Scaffold(
         body: NotificationListener(
       onNotification: (notification) {
@@ -213,18 +215,23 @@ class _DetailPageState extends State<DetailPage> {
                               ),
                             ],
                           ),
-                          Row(
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  'Cor do Cabelo: ${widget.people.hairColor}',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
+                          Visibility(
+                            visible: (widget.people.hairColor != null)
+                                ? true
+                                : false,
+                            child: Row(
+                              children: [
+                                Flexible(
+                                  child: Text(
+                                    'Cor do Cabelo: ${widget.people.hairColor}',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           Row(
                             children: [

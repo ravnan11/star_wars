@@ -32,6 +32,7 @@ dependencies:
   http: ^0.13.4
   cached_network_image: 3.2.0
   flutter_launcher_icons: ^0.9.3
+  url_launcher: 6.1.2	
 
 
 

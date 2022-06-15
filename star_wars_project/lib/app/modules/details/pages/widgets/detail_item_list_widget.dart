@@ -24,7 +24,7 @@ class DetailItemListWidget extends StatelessWidget {
               Tween<double>(end: isDiff ? 100 : 300, begin: isDiff ? 300 : 100),
           builder: (context, value, child) {
             return CachedNetworkImage(
-              imageUrl: people.image,
+              imageUrl: people.image!,
               width: size.width * .70,
               height: size.width * .70,
               fit: BoxFit.contain,

@@ -30,7 +30,7 @@ class DetailListWidget extends StatelessWidget {
                 children: [
                   Flexible(
                     child: Text(
-                      people.name,
+                      people.name!,
                       style: TextStyle(
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
